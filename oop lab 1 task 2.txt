@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float pfM, oopM, dldM, ictM;
+    float totalMarks, averageMarks;
+    char grade;
+    int choice;
+    do{
+    cout<<"Enter the marks of PF: ";
+    cin>>pfM;
+    cout<<"Enter the marks of OOP: ";
+    cin>>oopM;
+    cout<<"Enter the marks of DLD: ";
+    cin>>dldM;
+    cout<<"Enter the marks of ICT: ";
+    cin>>ictM;
+    totalMarks= pfM+oopM+dldM+ictM;
+    averageMarks=totalMarks/4.0;
+    cout<<"Total Marks: "<<totalMarks<<"/400"<<endl;
+    cout<<"Average Marks: "<<averageMarks<<"/100"<<endl;
+    if(averageMarks>=90){
+       grade='A';
+    }
+    else if(averageMarks>=80 && averageMarks<90){
+       grade='B';
+    }
+    else if(averageMarks>=70 && averageMarks<80){
+       grade='C';
+    }
+    else if(averageMarks>=60 && averageMarks<70){
+       grade='D';
+    }
+    else{
+       grade='F';
+    }
+    cout<<"Grade: "<<grade<<endl;
+    cout<<"Press 1 if you want to calculate grades for more students and any key to exit: ";
+    cin>>choice;
+    } while(choice==1); 
+}

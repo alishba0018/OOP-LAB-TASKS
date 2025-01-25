@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{  
+    int unitsConsumed;
+    cout<<"Enter the units consumed: ";
+    cin>>unitsConsumed;
+    float totalBill, finalBill;
+    float surcharge;
+    if(unitsConsumed>=0 && unitsConsumed<=50){
+        totalBill=unitsConsumed*0.5;
+    }
+    else if(unitsConsumed>50 && unitsConsumed<=150){
+        totalBill=((unitsConsumed-50)*0.75)+ 50*0.5;
+    }
+    else if(unitsConsumed>150 && unitsConsumed<=250){
+        totalBill=((unitsConsumed-150)*1.2)+ 50*0.5 + 100*0.75;
+    }
+    else if(unitsConsumed>250){
+        totalBill=((unitsConsumed-250)*1.5)+ 50*0.5 + 100*0.75 + 100*1.2;
+    }
+    else{
+        cout<<"Invalid units consumed entered!";
+        return 0;
+    }
+    surcharge=totalBill*0.2;
+    finalBill=surcharge+totalBill;
+    cout<<"Total Electricity Bill (including surcharge) is: "<<finalBill;
+    return 0;
+}
