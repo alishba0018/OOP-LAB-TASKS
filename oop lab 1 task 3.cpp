@@ -11,7 +11,7 @@ void sub(int num1, int num2){
 void mult(int num1, int num2){
 	cout<<"ans is: "<<num1*num2;
 }
-void div(int num1, int num2){
+void divi(int num1, int num2){
 	cout<<"ans is: "<<num1/num2;
 }
 
@@ -36,7 +36,7 @@ int main(){
 			mult(num1,num2);
 			break;
 		case 4:
-			div(num1,num2);
+			divi(num1,num2);
 			break;		
 		default:
 		    break;	
